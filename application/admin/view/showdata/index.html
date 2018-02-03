@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="http://www.h-ui.net/static/h-ui/css/H-ui.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+
+        .bm_picList li,.bm_picList li img.pic,.bm_picList li a{display: block;width:295px;height:160px}
+        .bm_picList li{ float: left; position: relative; overflow: hidden}
+        .bm_picList li img.pic{  position: absolute;left:0px; top: 0px;width:305px;
+            -webkit-transition:all .3s ease;-moz-transition:all .3s ease;-ms-transition:all .3s ease;-o-transition:all .3s ease;transition:all .3s ease}
+        .bm_picList li a{ cursor: pointer}
+        .bm_picList li a:hover img.pic{left:-10px}
+        .bm_picList li .info{position: absolute;; top: 25px; left: 25px; z-index: 2}
+        .bm_picList li h3{ font-size:24px ; color: #000; margin-top: 0px; margin-bottom:5px; font-weight: normal}
+        .bm_picList li a h3{ color: #000}
+        .bm_picList li a p,.bm_picList li a:hover p{ color:#666}
+        .bm_picList li a:hover h3{ color: #000}
+        .bm_picList li .info p{ font-size: 14px;margin-bottom: 0px}
+        .bm_picList li a.c_white h3,.bm_picList li a.c_white:hover h3,.bm_picList li a.c_white p,.bm_picList li a.c_white:hover p{ color:#fff}
+
+    </style>
+    <script src="__STATIC__/data/js/jquery-1.10.2.js"></script>
+    <script src="__STATIC__/data/js/echarts.min.js"></script>
+    <script src="__STATIC__/data/js/echarts.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/layui/css/layui.css" />
+    <script src="__STATIC__/layui/layui.js"></script>
+</head>
+<body>
+<div>
+<div style="width: 33%;height: 100px;background-color: #7EC4CC;float: left">
+    <div style="margin:10px 0 0 0;position: absolute;">
+<img src="__STATIC__/data/images/温度.png">
+    </div>
+    <h2 style="text-align: center;color:whitesmoke">当前温度</h2>
+    <br/>
+    <h1 style="text-align: center;color:whitesmoke">{$tem}℃</h1>
+</div>
+<div style="width: 33%;height: 100px;background-color: #9c9c9c;float: left">
+    <div style="margin:10px 0 0 0;position: absolute;">
+        <img src="__STATIC__/data/images/土壤湿度.png">
+    </div>
+    <h2 style="text-align: center;color:whitesmoke">当前湿度</h2>
+    <br/>
+    <h1 style="text-align: center;color:whitesmoke">{$hum}RH%</h1>
+</div>
+<div style="width: 34%;height: 100px;background-color: #009688;float: left">
+    <div style="margin:10px 0 0 0;position: absolute;">
+        <img src="__STATIC__/data/images/时间.png">
+    </div>
+    <h2 style="text-align: center;color:whitesmoke">当前时间</h2>
+    <br/>
+    <h1 style="text-align: center;color:whitesmoke">{$time}</h1>
+</div>
+</div>
+<div>
+<div id="tb1" style="width: 45%;height:500px;margin:0 0 0 0;float: left"></div>
+<div id="tb2" style="width: 50%;height:500px;margin:0 0 0 0;float: left"></div>
+</div>
+</body>
+<script src="__STATIC__/data/js/showdata.js"></script>
+</html>
