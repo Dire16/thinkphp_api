@@ -9,4 +9,4 @@ session_start();
 $temp=$_GET['wendu'];
 echo $temp;
 $_SESSION['wendu']=$temp;
-echo $_SESSION['wendu'];
+echo $_SESSION['wendu1'];
